@@ -1,0 +1,45 @@
+-Getting cw-
+
+local cw = game:GetService("Cuteware")
+
+-Getting tabs path-
+
+local tabs = cw:GetTabs()
+local scriptTab = tabs.Scripts (can be any tab)
+
+-Getting column-
+
+left is 1, right is 2
+local scriptColumn = scriptTab:GetColumn(1)
+
+-Creating sections-
+
+local section = scriptColumn:AddSection("YOUR TEXT HERE")
+
+-Adding sliders,toggles,etc.-
+
+local toggle = section:AddToggle({text = " ", callback = function(val)
+      print(val)
+end})
+
+local slider = section:AddSlider({text = " ", min = 0, max = 100, callback = function(val)
+      print(val)
+end})
+
+local keybind = section:AddBind({text = " ", key = "NONE", callback = function(val)
+      print(val)
+end})
+
+local colorpicker = section:AddColor({text = " ", color = Color3.fromRGB(255, 255, 255), callback = function(color) --there is trans too (https://cuteware-1.gitbook.io/cuteware-1/documentation/using-the-ui-library)
+      print(color)
+end})
+
+local label = section:AddLabel({text = " "})
+
+local dropdown = section:AddList({text = " ", values = {"1","2","3","4"}, callback = function(list)
+      print(list)
+end})
+
+local button = section:AddButton({text = " ", callback = function()
+    print("You clicked me!")
+end})
