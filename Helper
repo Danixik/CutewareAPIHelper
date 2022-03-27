@@ -22,7 +22,7 @@ local toggle = section:AddToggle({text = " ", callback = function(val)
       print(val)
 end})
 
-local slider = section:AddSlider({text = " ", min = 0, max = 100, callback = function(val)
+local slider = section:AddSlider({text = " ", min = 0, max = 100, float = 0.1 callback = function(val)
       print(val)
 end})
 
